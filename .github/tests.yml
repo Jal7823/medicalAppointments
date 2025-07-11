@@ -2,8 +2,11 @@ name: Run Tests with Allure
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
   pull_request:
+    branches:
+      - main
 
 jobs:
   test:
