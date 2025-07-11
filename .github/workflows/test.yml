@@ -23,11 +23,13 @@ jobs:
 
       - name: Install dependencies
         run: |
+          cd apiSpecialties
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
       - name: Run tests with Allure
         run: |
+          cd apiSpecialties
           pytest --alluredir=allure-results
 
       - name: Upload Allure Results
@@ -35,3 +37,4 @@ jobs:
         with:
           name: allure-results
           path: allure-results
+
